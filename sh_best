@@ -1,0 +1,91 @@
+#!
+#! many of these commands came from:
+#!   http://www.commandlinefu.com/commands/browse/sort-by-votes
+#!   http://unix.stackexchange.com/questions/6/what-are-your-favorite-command-line-features-or-tricks
+#!
+
+# Send a tweet
+# $1 = username
+# $2 = message (must be quoted)
+function tweet {
+  curl -u $1 -d status=$2 http://twitter.com/statuses/update.xml -d source="cURL"
+}
+
+# Use the proper extract command for the given file type
+# $1 = filename
+function extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)  tar xjf $1      ;;
+            *.tar.gz)   tar xzf $1      ;;
+            *.bz2)      bunzip2 $1      ;;
+            *.rar)      rar x $1        ;;
+            *.gz)       gunzip $1       ;;
+            *.tar)      tar xf $1       ;;
+            *.tbz2)     tar xjf $1      ;;
+            *.tgz)      tar xzf $1      ;;
+            *.zip)      unzip $1        ;;
+            *.Z)        uncompress $1   ;;
+            *)          echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# Run last command as root
+#? sudo !!
+
+# Start a simple http server in python in this directory
+alias start-server-here='python -m SimpleHTTPServer'
+
+# Run last command but replacing foo with bar
+#? ^foo^bar
+
+# Runs previous command replacing foo by bar every time that foo appears
+#? !!:gs/foo/bar
+
+# Invoke editor here
+#? ctrl-x e
+
+# Invoke command without saving history
+#? <space>command
+
+# Place the argument of the most recent command on the shell
+#? 'ALT+.' or '<ESC> .'
+
+# Salvage a borked terminal
+#? reset
+
+# Currently mounted file systems in a nice layout
+alias nice-mount='mount | column -t'
+
+# Execute a command at a given time
+#? echo "ls -l" | at midnight
+
+# start a tunnel from some machine's port 80 to your local post 2001
+# $1 = remote
+function local-access {
+  ssh -N -L2001:localhost:80 $1
+}
+
+# Get your external IP address
+alias get-ip='curl ifconfig.me'
+
+# Query Wikipedia via console over DNS
+# $1 = wikipedia query
+function query-wikipedia {
+  dig +short txt $1.wp.dg.cx
+}
+
+# Quick access to the ascii table
+# man ascii
+
+# output your microphone to a remote computer's speaker
+# $1 = remote
+function output-microphone {
+  dd if=/dev/dsp | ssh -c arcfour -C $1 dd of=/dev/dsp
+}
+
+# Mount folder/filesystem through SSH
+#? sshfs name@server:/fldr/pth /mnt/pth
