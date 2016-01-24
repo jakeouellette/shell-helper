@@ -18,29 +18,29 @@ then, open up a new terminal and run shell-help
 python ~/dev/scripts/shell_helper.py sh_best
 Scanning functions in: /Users/jouellette/dev/projects/shell-helper/sh_best
 
-/Users/jouellette/dev/projects/shell-helper/sh_best
+    /Users/jouellette/dev/projects/shell-helper/sh_best
 
- many of these commands came from:
-   http://www.commandlinefu.com/commands/browse/sort-by-votes
-   http://unix.stackexchange.com/questions/6/what-are-your-favorite-command-line-features-or-tricks
+    many of these commands came from:
+      http://www.commandlinefu.com/commands/browse/sort-by-votes
+      http://unix.stackexchange.com/questions/6/what-are-your-favorite-command-line-features-or-tricks
 
-  tweet                                   # Send a tweet, $1 = username, $2 = message (must be quoted)
-  extract                                 # Use the proper extract command for the given file type, $1 = filename
-  $ sudo !!                               # Run last command as root
-  start-server-here                       # Start a simple http server in python in this directory, ... 'python -m SimpleHTTPServer'
-  $ ^foo^bar                              # Run last command but replacing foo with bar
-  $ !!:gs/foo/bar                         # Runs previous command replacing foo by bar every time that foo appears
-  $ ctrl-x e                              # Invoke editor here
-  $ <space>command                        # Invoke command without saving history
-  $ 'ALT+.' or '<ESC> .'                  # Place the argument of the most recent command on the shell
-  $ reset                                 # Salvage a borked terminal
-  nice-mount                              # Currently mounted file systems in a nice layout, ... 'mount | column -t'
-  $ echo "ls -l" | at midnight            # Execute a command at a given time
-  local-access                            # start a tunnel from some machine's port 80 to your local post 2001, $1 = remote
-  get-ip                                  # Get your external IP address, ... 'curl ifconfig.me'
-  query-wikipedia                         # Query Wikipedia via console over DNS, $1 = wikipedia query
-  output-microphone                       # output your microphone to a remote computer's speaker, $1 = remote
-  $ sshfs name@server:/fldr/pth /mnt/pth  # Mount folder/filesystem through SSH
+      tweet                                   # Send a tweet, $1 = username, $2 = message (must be quoted)
+      extract                                 # Use the proper extract command for the given file type, $1 = filename
+      $ sudo !!                               # Run last command as root
+      start-server-here                       # Start a simple http server in python in this directory, ... 'python -m SimpleHTTPServer'
+      $ ^foo^bar                              # Run last command but replacing foo with bar
+      $ !!:gs/foo/bar                         # Runs previous command replacing foo by bar every time that foo appears
+      $ ctrl-x e                              # Invoke editor here
+      $ <space>command                        # Invoke command without saving history
+      $ 'ALT+.' or '<ESC> .'                  # Place the argument of the most recent command on the shell
+      $ reset                                 # Salvage a borked terminal
+      nice-mount                              # Currently mounted file systems in a nice layout, ... 'mount | column -t'
+      $ echo "ls -l" | at midnight            # Execute a command at a given time
+      local-access                            # start a tunnel from some machine's port 80 to your local post 2001, $1 = remote
+      get-ip                                  # Get your external IP address, ... 'curl ifconfig.me'
+      query-wikipedia                         # Query Wikipedia via console over DNS, $1 = wikipedia query
+      output-microphone                       # output your microphone to a remote computer's speaker, $1 = remote
+      $ sshfs name@server:/fldr/pth /mnt/pth  # Mount folder/filesystem through SSH
 
 # Formatting 101
 
