@@ -18,6 +18,7 @@ then, open up a new terminal and run shell-help
 
 # Example run
 python ~/dev/scripts/shell_helper.py sh_best
+
 Scanning functions in: /Users/jouellette/dev/projects/shell-helper/sh_best
 
     /Users/jouellette/dev/projects/shell-helper/sh_best
