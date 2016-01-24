@@ -5,19 +5,19 @@ Shell helper shows all shell functions and aliases with documentation
 
 # setup
 
-Copy shell_helper.py and sh_best to your ~/ folder. Add to your .bashrc the following lines:
+Copy shell-helper.py and sh_best to your ~/ folder. Add to your .bashrc the following lines:
 
     source $HOME/sh_best
 
     # List shell functions
     function shell-help {
-      python ~/shell_helper.py ~/.bashrc
+      python ~/shell-helper.py ~/.bashrc
     }
 
 then, open up a new terminal and run shell-help
 
 # Example run
-python ~/dev/scripts/shell_helper.py sh_best
+python ~/dev/scripts/shell-helper.py sh_best
 
     Scanning functions in: /Users/jouellette/dev/projects/shell-helper/sh_best
 
