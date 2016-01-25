@@ -1,7 +1,7 @@
 # shell-helper
 If you're like me, you're always forgetting your cute aliased utility methods you've been writing. Shell-helper solves that problem.
 
-Shell helper shows all shell functions and aliases with documentation
+Shell helper shows all shell functions and aliases that have documentation comments
 
 # setup
 
