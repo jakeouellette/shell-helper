@@ -76,7 +76,13 @@ Will show up as:
 
     $ ls -l         # Don't forget to ls -l sometimes!,
 
-Finally, if you want to output something (e.g., a header to a section of function)
+Finally, if you want to output something (e.g., a header to a section of function), use:
+
+    #! Put anything here, hello world!
+    
+And it will show up in the shell helper where you added the comment, e.g.,
+
+    Put anything here, hello world!
 
 # Recursive sourcing
 
