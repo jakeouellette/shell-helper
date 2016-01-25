@@ -5,7 +5,7 @@ Shell helper shows all shell functions and aliases with documentation
 
 # setup
 
-Copy shell-helper.py and sh_best to your ~/ folder. Add to your .bashrc the following lines:
+Copy shell-helper.py and sh_best to your ~/ folder. Add to your .bashrc the following lines: (you could also put it in your .zshrc, or .bash_profile, but if you do, update the shell-help function.)
 
     source $HOME/sh_best
 
@@ -81,3 +81,7 @@ Finally, if you want to output something (e.g., a header to a section of functio
 # Recursive sourcing
 
 Shell helper will attempt to recursively source all sourced shells. This lets you organize your scripts, e.g., by topic. For example, you might split your shell scripts into `.backend_sh`, `.frontend_sh`, then source them from your bashrc.
+
+# sh_best
+
+I included in this repo a shell script with popular shell commands that serve as examples to show how to use this utility. I use a different set of commands that are mostly work-related, but I wanted to give a realistic example. :)
